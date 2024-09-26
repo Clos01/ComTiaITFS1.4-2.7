@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* Reset margins and padding */
+html, body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+ul, li {
+  padding: 0 0 10px 0;
+}
+*{
+    /* border: 2px solid #ff1717; */
+}
+.callToAction {
+    background-image: url("../images/ComTia.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100vw; /* Ensures the section spans the full viewport width */
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    position: relative; /* Required for the overlay */
+  }
+  
+  .callToAction::before {
+    content: "";
+  position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(19, 19, 19, 0.767); /* Overlay color with opacity */
+    z-index: 1; /* Ensures the overlay stays above the background */
+  }
+  
+  .callToAction > * {
+    position: relative;
+    z-index: 2; /* Ensures content stays above the overlay */
+  }
+/* Section Styling */
+/* Ensures both sections are aligned and have the same width */
+.bg-CTA, .info-section {
+  max-width: 1800px; /* Set the same max-width for both sections */
+  width: 100%;
+  margin: 50px auto; /* Center both sections */
+  padding: 30px; /* Padding for spacing inside the section */
+  margin-top: 8rem;
+  
+}
+.bg-CTA, .info-section p {
+font-size: 25px;
+}
+.info-section{
+  margin: -50px auto; /* Center both sections */
+}
+/* Adjust flexbox behavior to prevent image overflow */
+.bg-CTA {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px; /* Padding inside the section */
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.text-content {
+  max-width: 50%; /* Ensure the text takes up only half the width */
+}
+
+.image-content {
+  max-width: 45%; /* Ensure the image takes up less than the text */
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Info Section */
+.info-section {
+  background-color: #f1f1f1;
+  padding: 50px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.info-section h2 {
+  font-size: 2em;
+  color: #000000;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.info-section p {
+  font-size: 1.2em;
+  color: #000000;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.info-container {
+background-color: #f1f1f1;
+  display: flex;
+  justify-content: start;
+margin: 0 auto;
+ width: 75%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .bg-CTA {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text-content {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .image-content {
+    max-width: 100%;
+    width: 80%;
+  }
+
+  .info-section {
+    max-width: 100%; /* Ensure full width on smaller screens */
+  }
+}
+#nxt-btn-Id{
+  width: 200px;
+}
